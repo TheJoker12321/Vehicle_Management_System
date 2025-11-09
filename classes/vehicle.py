@@ -1,0 +1,23 @@
+from abc import ABC, abstractmethod
+
+
+class Vehicle(ABC):
+    def __init__(self, license_plate, year):
+        self.__license_plate = license_plate
+        self.__year = year
+
+    def get_license_plate(self):
+        return self.__license_plate
+
+    def set_license_plate(self, new_license_plate):
+        self.__license_plate = new_license_plate
+
+    def get_year(self):
+        return self.__year
+
+    def set_year(self, new_year):
+        self.__year = new_year
+
+    @abstractmethod
+    def calculate_annual_tax(self):
+        pass
